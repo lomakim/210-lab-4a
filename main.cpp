@@ -6,7 +6,7 @@
 using namespace std;
 
 // CONST DECLARATIONS
-const int MAX_VALUE = 255, WIDTH = 8;
+const int MAX_VALUE = 255, WIDTH = 9;
 
 
 // STRUCT DECLARATIONS
@@ -33,10 +33,19 @@ int main(){
     }
 
     // Print Table of Values
-    cout << setw(WIDTH) << "Color #" << "R Value" << "G Value" << "B Value" << endl;
-    cout << setw(WIDTH) << "------- " << "------- " << "------- " << "------- ";
+    cout << left << setw(WIDTH) << "Color #"
+         << setw(WIDTH) << "R Value" 
+         << setw(WIDTH) << "G Value" 
+         << setw(WIDTH) << "B Value" << endl;
+
+    cout << left << setw(WIDTH) << "------- "
+         << setw(WIDTH) << "------- " 
+         << setw(WIDTH) << "------- " 
+         << setw(WIDTH) << "------- " << endl;
+
     for (int j = 0; j < vec.size(); j++){
-        cout << setw(WIDTH) << vec[j].red
+        cout << left << setw(WIDTH) << j + 1
+             << setw(WIDTH) << vec[j].red
              << setw(WIDTH) << vec[j].green
              << setw(WIDTH) << vec[j].blue << endl;
     }
