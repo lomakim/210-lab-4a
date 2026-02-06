@@ -16,11 +16,9 @@ int main(){
     // Test struct and empty vec
     Color c = {10, 190, 75};
 
-    if (vec.empty()) {
-        cout << "Vector is empty.\n";
-    }
+    vec.push_back(c);
 
-    cout << c.red << ", " << c.green << ", " << c.blue;
+    cout << vec[0].red << ", " << vec[0].green << ", " << vec[0].blue;
 
     return 0;
 }
