@@ -4,7 +4,11 @@
 #include <vector>
 using namespace std;
 
-// STRUCT DECLARATION
+// CONST DECLARATIONS
+const int MAX_VALUE = 255;
+
+
+// STRUCT DECLARATIONS
 struct Color {
     int red, green, blue;
 };
@@ -21,18 +25,19 @@ int main(){
 
     // Push rand num of colors into vector
     for (int i = 0; i < n; i++){
-        temp.red = rand();
-        temp.green = rand();
-        temp.blue = rand();
+        temp.red = rand() % (MAX_VALUE + 1);
+        temp.green = rand() % (MAX_VALUE + 1);
+        temp.blue = rand() % (MAX_VALUE + 1);
         vec.push_back(temp);
     }
 
+    // Test print for Milestone 3
+    cout << "Num of colors: " << n << endl << endl;
     for (int j = 0; j < vec.size(); j++){
-        cout << 
+        cout << vec[j].red << "  "
+             << vec[j].green << "  "
+             << vec[j].blue << "  " << endl;
     }
-
-    // Test vec
-    cout << vec[0].red << ", " << vec[0].green << ", " << vec[0].blue;
 
     return 0;
 }
